@@ -99,6 +99,22 @@ main .member:nth-child(6) {
   justify-self: end;
 }
 
+.attribution {
+  text-align: center;
+  margin-bottom: 9rem;
+  color: var(--gray);
+  font: 600 1.4rem var(--mt);
+}
+
+.attribution a {
+  color: var(--gray);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 1000px) {
   header h1 {
     font-size: clamp(2.5rem, 8vw, 3.6rem);
@@ -162,5 +178,13 @@ main .member:nth-child(6) {
     top: auto;
     bottom: 1rem;
     left: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .attribution p {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
