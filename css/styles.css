@@ -1,0 +1,166 @@
+:root {
+  --black: #000000;
+  --gray: #a9a9a9;
+  --pop: "Poppins", sans-serif;
+  --mt: "Montserrat", sans-serif;
+  --pt: "PT Serif", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  position: relative;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: var(--black);
+  width: calc(100% - (clamp(1px, 9vw, 240px) * 2));
+  margin: clamp(50px, 7vw, 120px) auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1 {
+  font: 700 min(2.5vw, 3.6rem) var(--pt);
+}
+
+aside {
+  width: 43.9rem;
+}
+
+aside h2,
+aside p {
+  font: min(1.79vw, 1.8rem) var(--pop);
+}
+
+aside h2 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+aside p {
+  font-weight: 400;
+}
+
+main {
+  height: 85rem;
+  margin: 9.6rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2.2rem;
+}
+
+main .member {
+  width: 23.8rem;
+  height: 32.1rem;
+  position: relative;
+}
+
+main .member img {
+  width: 80%;
+}
+
+main .member h3 {
+  position: absolute;
+  bottom: 0.8rem;
+  font: 600 1.8rem var(--pop);
+}
+
+main .member span {
+  position: absolute;
+  top: 0;
+  font: 400 1.2rem var(--pt);
+  writing-mode: vertical-rl;
+  right: 2.3rem;
+}
+
+main .member:nth-child(2),
+main .member:nth-child(5) {
+  justify-self: center;
+  align-self: center;
+}
+
+main .member:nth-child(3),
+main .member:nth-child(6) {
+  justify-self: end;
+}
+
+@media (max-width: 1000px) {
+  header h1 {
+    font-size: clamp(2.5rem, 8vw, 3.6rem);
+  }
+  aside h2,
+  aside p {
+    font-size: 1.8rem;
+  }
+  header {
+    flex-direction: column;
+  }
+  header h1 {
+    margin-bottom: 3.7rem;
+  }
+  header aside {
+    width: 100%;
+  }
+}
+
+@media (max-width: 942px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 120rem;
+  }
+  main .member:nth-child(odd) {
+    justify-self: start;
+    align-self: initial;
+  }
+  main .member:nth-child(even) {
+    justify-self: center;
+    align-self: end;
+  }
+}
+
+@media (max-width: 623px) {
+  main {
+    display: block;
+    height: auto;
+  }
+  main .member {
+    margin: auto;
+    margin-bottom: 2.4rem;
+    height: 41rem;
+  }
+  main .member:last-child {
+    margin-bottom: 0;
+  }
+  main .member img {
+    width: 100%;
+  }
+  main .member h3 {
+    width: 100%;
+    text-align: center;
+    bottom: 2.8rem;
+  }
+  main .member span {
+    writing-mode: horizontal-tb;
+    width: 100%;
+    text-align: center;
+    top: auto;
+    bottom: 1rem;
+    left: 0;
+  }
+}
