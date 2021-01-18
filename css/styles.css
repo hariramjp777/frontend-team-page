@@ -101,7 +101,7 @@ main .member:nth-child(6) {
 
 .attribution {
   text-align: center;
-  margin-bottom: 9rem;
+  padding-bottom: 9rem;
   color: var(--gray);
   font: 600 1.4rem var(--mt);
 }
